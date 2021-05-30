@@ -1,0 +1,5 @@
+<view  class="taskBox" wx:key="index">
+  <view class="title">{{noteList.title}}</view>
+  <view class="author">{{noteList.nickName}}</view>
+  <view class="content">{{noteList.content}}</view>
+</view>

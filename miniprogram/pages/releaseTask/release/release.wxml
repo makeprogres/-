@@ -1,0 +1,54 @@
+<form vlue="{{textVal}}" class="daBos" bindsubmit="btnSub">
+  <view  class="taskBox">
+  <view class="task">任务标题</view>
+  <input name="title" class="title" type="text" auto-focus placeholder="一句话完整说明你的任务"></input>
+  <view class="task">任务描述</view>
+  <textarea name="content" class="title" placeholder="请输入任务详细介绍,可以增加额外奖励"></textarea>
+  <view class="box">
+    <view class="task">出发时间</view>
+    <picker name="time" mode="time" value="{{time}}" start="06:00" end="22:00" bindchange="bindTimeChange">
+      <view class="title">
+        当前选择: {{time}}->
+      </view>
+    </picker>
+  </view>
+  
+  <view class="imgBox">
+    <button class="butBox" name="pic" size="mini" bindtap="handChooseImg"
+    >  
+    + </button>
+    <view bindtap="handRemoveImg" data-index="{{index}}" class="imgs" wx:for="{{chooseImage}}" wx:key="*this">
+      <UpImg src="{{item}}"></UpImg>
+    </view>
+  </view> 
+  <view class="box">
+    <view class="task">任务奖励</view>
+    <input name="reward" placeholder="请输入奖励" class="title" type="number"></input>
+  </view>
+  <view class="box">
+    <view class="task">请选择性别</view>
+  <picker name="gender" bindchange="bindPickerChange" value="{{array[index]}}" range="{{array}}">
+    <view class="picker">
+      {{array[index]}}->
+    </view>
+  </picker>
+  </view>
+
+  <view class="box">
+    <view class="task">是否可拨打你的电话：</view>
+    <switch name="agree" bindchange="bindChooseChange"></switch>
+  </view>
+
+  <block wx:if="{{Boolean}}">
+    <view class="box">
+      <view class="task">联系电话：</view>
+      <input name="phone" placeholder="请输入联系方式" class="title" type="munber"></input>
+    </view>
+  </block>
+  <button type="warn" form-type="submit"> 提交 </button>
+  <button form-type="reset"> 重置 </button>
+</view>
+</form>
+
+
+

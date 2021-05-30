@@ -1,0 +1,15 @@
+<view class="topBox">
+  <view class="text">
+    <text class="txt-1">感谢信</text>
+    <text class="txt-2">感谢有你</text>
+  </view>
+</view>
+
+<view class="notesBox">
+  <navigator class="note" wx:for="{{noteList}}" wx:key="index" url="/pages/noteDetails/noteDetails?_id={{item._id}}">
+    <view class="name">
+      <text class="txt">{{item.title}}  </text>
+      <text class="time">作者：{{item.nickName}} -- 时间：{{item.timeStamp}}</text>
+    </view>
+  </navigator>
+</view>

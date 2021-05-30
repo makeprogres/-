@@ -1,0 +1,7 @@
+<form class="Box" bindsubmit="saveValue">
+  <view class="textBox">
+    <input name="declaration" focus class="input" type="text" value="{{userObj.declaration}}"></input>
+    <button size="mini" type="primary" form-type="submit">保存</button>
+  </view>
+  <view class="text">宣言，展示我的独特态度!</view>
+</form>

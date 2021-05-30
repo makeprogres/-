@@ -1,0 +1,12 @@
+<view class="top">
+  <view class="header content">
+    <navigator open-type="switchTab" url="/pages/index/index" class="logo">
+      <image class="img" mode="heightFix" src="https://636c-cloud1-8g83xef220a33951-1305847147.tcb.qcloud.la/indexImg/help.png?sign=68b286827f985363c2e387d2260ddde4&t=1621826703"></image>
+      <view>赠人玫瑰，手有余香</view>
+    </navigator>
+    <view  class="kefu">
+      <button class="btn" open-type="contact"></button>
+      <image class="imgkf" mode="heightFix"  src="https://636c-cloud1-8g83xef220a33951-1305847147.tcb.qcloud.la/indexImg/xiaoxi.png?sign=b475ba237139820545dcd599ea0d397b&t=1621826477"></image>
+    </view>
+  </view>
+</view>

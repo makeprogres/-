@@ -1,0 +1,7 @@
+.top{width: 750rpx; height: 90rpx; }
+.header{display: flex ; justify-content: space-between;align-items: center;height: 100%;}
+.header .logo{display: flex; font-size: 20rpx; align-items: center;}
+.header .img{height: 50rpx; padding: 0 0 0 26rpx;}
+.header .imgkf{height: 50rpx; margin: 0 26rpx;}
+.header .kefu{position: relative;animation: dh 1s linear infinite alternate;}
+.kefu .btn{position: absolute;width: 100%;height: 100%; left: 0; top: 0; opacity: 0;}

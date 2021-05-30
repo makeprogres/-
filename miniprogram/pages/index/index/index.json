@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "PubTitle":"/pages/components/PubTitle/PubTitle",
+    "HdView":"/pages/components/HdView/HdView"
+  }
+}

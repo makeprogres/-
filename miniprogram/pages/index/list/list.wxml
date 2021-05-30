@@ -1,0 +1,22 @@
+<HdView />
+<view class="rankingBox">
+  <view class="topBox">
+    <view class="text">
+      <text class="txt-1">爱心榜</text>
+      <text class="txt-2">人人都是爱心大使</text>
+    </view>
+  </view>
+
+  <view class="ranking" wx:for="{{dataList}}" wx:key="index">
+    <view class="imgBox">
+    <image src="{{item.avatarUrl}}"></image>
+    </view>
+    <view class="textBox">
+      <view class="name">{{item.nickName}}</view>
+      <view class="departments">{{item.college}}</view>
+      <view class="declarationName">宣言 : </view>
+      <view class="txt">{{item.declaration}}</view>
+      <view class="achievement">成就 : <text>{{item.achievement}}</text></view>
+    </view>
+  </view>
+</view>

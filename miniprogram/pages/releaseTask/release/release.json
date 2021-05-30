@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "UpImg":"/pages/components/UpImg/UpImg"
+  },
+  "navigationBarTitleText": "发布任务"
+}

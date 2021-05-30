@@ -1,0 +1,7 @@
+<view class="topBox">
+      <view class="text">
+        <text class="txt-1">{{myTitle}}</text>
+        <text class="txt-2">{{mySentence}}</text>
+      </view>
+      <navigator open-type="reLaunch" url="{{myUrl}}" class="more">查看全部 ></navigator>
+</view>

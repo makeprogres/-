@@ -1,0 +1,102 @@
+{
+  "setting": {},
+  "condition": {
+    "plugin": {
+      "list": []
+    },
+    "game": {
+      "list": []
+    },
+    "gamePlugin": {
+      "list": []
+    },
+    "miniprogram": {
+      "list": [
+        {
+          "name": "测试",
+          "pathName": "pages/test/test",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "任务中心",
+          "pathName": "pages/order/order",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "爱心榜",
+          "pathName": "pages/list/list",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "个人中心",
+          "pathName": "pages/personal/personal",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "首页",
+          "pathName": "pages/index/index",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "感谢信",
+          "pathName": "pages/note/note",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "我已发布",
+          "pathName": "pages/releaseList/releaseList",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "消息中心",
+          "pathName": "pages/message/message",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "任务详情",
+          "pathName": "pages/taskDetails/taskDetails",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "修改个人信息",
+          "pathName": "pages/user/user",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "发布任务",
+          "pathName": "pages/release/release",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "修改昵称",
+          "pathName": "pages/changeName/changeName",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "pages/thankNote/thankNote",
+          "pathName": "pages/thankNote/thankNote",
+          "query": "",
+          "scene": null
+        },
+        {
+          "name": "感谢信详情",
+          "pathName": "pages/noteDetails/noteDetails",
+          "query": "",
+          "scene": null
+        }
+      ]
+    }
+  }
+}

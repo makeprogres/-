@@ -1,0 +1,9 @@
+<view class="message">
+  <navigator class="messageBox" wx:for="{{8}}" wx:key="index">
+    <image class="img" src="/storage/images/home.png"></image>
+    <view class="textBox">
+      <text class="txt-1">系统消息</text>
+      <text class="txt-2">您已接下幸福一生的帮助单，请尽快赶</text>
+    </view>
+  </navigator>
+</view>

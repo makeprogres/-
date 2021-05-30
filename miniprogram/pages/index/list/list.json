@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "HdView":"/pages/components/HdView/HdView"
+  },
+  "navigationBarTitleText": "爱心榜"
+}

@@ -1,0 +1,10 @@
+
+<form vlue="{{textVal}}" class="daBos" bindsubmit="btnSub">
+  <view  class="taskBox">
+  <view class="task">标题</view>
+  <input name="title" class="title" type="text" auto-focus placeholder="一句话完整说明你的标题"></input>
+  <view class="task">内容</view>
+    <textarea name="content" class="title" placeholder="请输入感谢信详细内容"></textarea>
+    <button type="warn" form-type="submit"> 发布 </button>
+  </view>
+</form>

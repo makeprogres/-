@@ -1,0 +1,19 @@
+<view class="listBox">
+      <navigator url="/pages/taskDetails/taskDetails?_id={{item._id}}" class="dyItem"  wx:for="{{8}}" wx:key="index">
+        <view class="pic">
+          <image src="/storage/images/heart-h.png"></image>
+        </view>
+        <view class="txt">
+          <view class="title">任务标题
+          </view>     
+          <view class="info">
+            <text>时间 : </text>
+            <text space="ensp" class="time">任务时间 </text> 
+          </view>
+        </view>
+        <view class="thank">
+          <view class="amount">佣金：<text>❤ </text> x 5</view>
+          <view class="complete">已完成</view>
+        </view>
+      </navigator>
+  </view>

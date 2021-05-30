@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "HdView":"/pages/components/HdView/HdView"
+  },
+  "navigationBarTitleText": "个人中心"
+}
