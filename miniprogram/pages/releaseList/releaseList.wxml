@@ -1,0 +1,21 @@
+<view class="listBox">
+      <navigator url="/pages/myTask/myTask?_id={{item._id}}" class="dyItem"  wx:for="{{listObj}}" wx:key="index">
+        <view class="pic">
+          <image src="{{item.images[0]}}"></image>
+        </view>
+        <view class="txt">
+          <view class="title">{{item.title}}
+          </view>     
+          <view class="info">
+            <text>时间 : </text>
+            <text space="ensp" class="time">{{item.timeStamp}} </text> 
+          </view>
+        </view>
+        <view class="thank">
+          <view class="amount">佣金：<text>❤ </text> {{item.reward}}</view>
+          <view wx:if="{{item.complete}}" class="Boolean">已完成</view>
+          <view wx:elif="{{item.Boolean}}" class="Boolean">已接受</view>
+          <view wx:else ></view>
+        </view>
+      </navigator>
+  </view>

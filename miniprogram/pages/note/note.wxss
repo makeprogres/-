@@ -1,0 +1,84 @@
+.topBox .butBox{
+  margin: 0;
+  font-size: 60rpx;
+  width: 100rpx;
+  height: 100rpx;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 20rpx;
+  color: #333;
+  position: fixed;
+  right: 20rpx;
+  top: 20rpx;
+  border: 1rpx #333 dotted;
+  border-radius: 10rpx;
+}
+
+.topBox{
+  background-color: #fff;
+  padding: 10rpx 10rpx;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+}
+.topBox .text{
+  margin: 0 20rpx;
+}
+.topBox .text::before{
+  width: 8rpx;
+  height: 30rpx;
+  display: block;
+  content: "";
+  background: #d43c33;
+  position: absolute;
+  top: 18rpx;
+  left: 20rpx;
+}
+.topBox .txt-1{
+  color: #d43c33;
+  margin:0 20rpx;
+  font-weight:bold;
+  font-size: 35rpx;
+  letter-spacing: 5rpx;
+}
+.topBox .txt-2{
+  font-size: 26rpx;
+  color: #bababa;
+}
+.notesBox{
+  background: #ccc;
+}
+.note{
+  display: flex;
+  box-sizing: border-box;
+  background: #fff;
+  width: 100%;
+  height: 200rpx;
+  padding: 20rpx 10rpx;
+  border-bottom: 2rpx dotted #ccc;
+}
+.note .name{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 160rpx;
+  margin: 0 20rpx;
+}
+.note .txt{
+  font-size: 30rpx;
+  margin: 10rpx 10rpx;
+}
+.note .time{
+  font-size: 23rpx;
+  color: #ccc;
+}
+.note .img{
+  width: 300rpx;
+  height: 160rpx;
+}
+.note image{
+  width: 300rpx;
+  height: 160rpx;
+}

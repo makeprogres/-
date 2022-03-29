@@ -1,4 +1,4 @@
-// pages/changeInformation/changeInformation.js
+const db=wx.cloud.database();
 Page({
 
   /**
@@ -8,11 +8,21 @@ Page({
 
   },
 
+  getData(_id){
+    db.collection("sharedResources").doc(_id).get().then(res=>{
+      this.setData({
+        noteList :res.data
+      })     
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const {_id} = options
+    this.getData(_id)
+    console.log(_id);
   },
 
   /**

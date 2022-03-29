@@ -1,4 +1,6 @@
-// pages/changeInformation/changeInformation.js
+
+const db = wx.cloud.database();
+const app = getApp();
 Page({
 
   /**
@@ -6,6 +8,21 @@ Page({
    */
   data: {
 
+  },
+
+  btnSub(res){
+    var formValues = res.detail.value;
+    formValues.time = Date.now();
+    db.collection('sharedResources').add({
+      data: formValues
+    }).then(res=>{
+      wx.showToast({
+        title: '提交成功,感谢给予宝贵意见！',
+      })
+      // wx.reLaunch({
+      //   url: "/pages/personal/personal"
+      // })
+    })
   },
 
   /**

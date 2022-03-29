@@ -1,4 +1,4 @@
-// pages/changeInformation/changeInformation.js
+const db = wx.cloud.database();
 Page({
 
   /**
@@ -7,12 +7,42 @@ Page({
   data: {
 
   },
+  //获取个人信息
+  getData(_id) {
+    db.collection("userInfo").doc(_id).get().then(res => {
+      this.setData({
+        userObj: res.data,
+        _id
+      })
+    })
+  },
+  saveValue(res) {
+    var resValue = res.detail.value;
+    this.setData({
+      college: resValue
+    })
+    var _id = this.data._id
+    db.collection("userInfo").doc(_id).update({
+      data: {
+        college: resValue.college
+      }
+    })
+    wx.navigateBack({
+      delta : 1
+    })
+
+
+  },
+
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    const {
+      _id
+    } = options;
+    this.getData(_id)
   },
 
   /**

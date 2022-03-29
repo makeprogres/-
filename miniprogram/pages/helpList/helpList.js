@@ -1,4 +1,7 @@
-// pages/changeInformation/changeInformation.js
+import common from "../../utils/public.js"
+const db = wx.cloud.database();
+const app = getApp();
+
 Page({
 
   /**
@@ -8,11 +11,31 @@ Page({
 
   },
 
+  getData() {
+    wx.cloud.callFunction({
+      name:"login",
+      data:{}
+    }).then((res)=>{
+      db.collection("tasklist").where({
+        acceptID: app.userInfo._id,
+        complete:'已完成'
+      }).orderBy('timeStamp', 'desc').get().then((res)=>{  
+        res.data.forEach(item=>{     
+          item.timeStamp=common.getMyData(item.timeStamp,"Y-m-d H:i:s")
+        })
+        this.setData({
+          listObj: res.data,
+        })
+        console.log(this.data.listObj);
+      })
+    })
+  },
+
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    this.getData()
   },
 
   /**

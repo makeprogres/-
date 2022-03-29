@@ -1,4 +1,6 @@
-// pages/changeInformation/changeInformation.js
+
+const db = wx.cloud.database();
+const app = getApp();
 Page({
 
   /**
@@ -6,6 +8,24 @@ Page({
    */
   data: {
 
+  },
+
+  btnSub(res){
+    var formValues = res.detail.value;
+    formValues.time = Date.now();
+    formValues.nickName = app.userInfo.nickName;
+    db.collection('sharedResources').add({
+      data: formValues
+    }).then(res=>{
+      db.collection("sharedResources").doc(res._id).get().then(res=>{
+        app.sharedResources = Object.assign(app.sharedResources, res.data)})
+      wx.showToast({
+        title: '发布成功',
+      })
+      wx.reLaunch({
+        url: "/pages/note/note"
+      })
+    })
   },
 
   /**

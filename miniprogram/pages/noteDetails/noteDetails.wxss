@@ -1,0 +1,19 @@
+.taskBox{
+  margin: 30rpx;
+}
+.title{
+  width: 100%;
+  font-size: 40rpx;
+  text-align: center;
+}
+.author{
+  font-size: 25rpx;
+  color: #ccc;
+  width: 100%;
+  margin-left: 55%;
+  margin-top: 10px;
+}
+.content{
+  font-size: 30rpx;
+  margin: 30rpx 0;
+}

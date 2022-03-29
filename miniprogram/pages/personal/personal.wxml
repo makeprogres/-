@@ -1,0 +1,106 @@
+<HdView />
+<view class="topBox">
+  <view class="header">
+    <image class="bgImg" mode="widthFix"
+      src="https://636c-cloud1-8g83xef220a33951-1305847147.tcb.qcloud.la/indexImg/background2.jpg?sign=963b22da5b6c095e17f41f30a3fba289&t=1621928389">
+    </image>
+    <view class="userBox">
+      <view class="infoBox">
+        <block wx:if="{{!hasUserInfo}}">
+          <view class="portraitBox">
+            <image src="{{avatarUrl}}"></image>
+          </view>
+          <view class="buttBox">
+            <button disabled="{{disabled}}" class="butt" plain wx:if="{{canIUseGetUserProfile}}"
+              bindtap="getUserProfile"> 登录 </button>
+          </view>
+        </block>
+        <block wx:else>
+          <navigator class="textBox" url="/pages/user/user?_id={{_id}}">
+            <view class="portraitBox">
+              <image src="{{avatarUrl}}" bindtap="bindViewTap" mode="cover"></image>
+            </view>
+            <view class="text">
+              <text class="name">{{nickName}}</text>
+              <view class="declaration">
+                <view>宣言 ：{{declaration}}</view>
+                <view>></view>
+              </view>
+            </view>
+          </navigator>
+        </block>
+      </view>
+    </view>
+
+    <view class="memberBox">
+      <view class="topBox">
+        <view class="tit">
+          <text class="iconfont icon-dengpao"></text>
+          每日一醒
+        </view>
+        <text class="b-btn">心心 ： {{achievement}}</text>
+        <text class="e-m">{{declarations}}</text>
+        <text class="e-b">下拉更新</text>
+      </view>
+    </view>
+
+    <view class="background" bindtouchstart="bindtouchstart" bindtouchmove="bindtouchmove" bindtouchend="bindtouchend"
+      style="transform: {{coverTransform}} ; transition:{{coveTransition}}">
+      <image class="arc" mode="widthFix"
+        src="https://636c-cloud1-8g83xef220a33951-1305847147.tcb.qcloud.la/indexImg/arc.png?sign=b9c6091ab9ff01afbb64df0970e86bcb&t=1621826748">
+      </image>
+      <view class="contentBox">
+        <view class="navBox">
+          <navigator class="navItem" url="/pages/message/message">
+            <text class="iconfont icon-mail"></text>
+            <text>我的消息</text>
+          </navigator>
+          <navigator class="navItem" url="/pages/releaseList/releaseList?_id={{_id}}">
+            <text class="iconfont icon-send"></text>
+            <text>我已发布</text>
+          </navigator>
+          <navigator class="navItem" url="/pages/helpList/helpList?_id={{_id}}">
+            <text class="iconfont icon-task"></text>
+            <text>我已帮助</text>
+          </navigator>
+        </view>
+      </view>
+
+      <view class="listBox">
+        <view class="lists">
+          <view class="recentlyPlayed">
+            <text class="e-a">最近帮助</text>
+            <block wx:if="{{listObj}}" class="list">
+              <navigator url="/pages/taskDetails/taskDetails?_id={{item._id}}" class="dyItem" wx:for="{{listObj}}"
+                wx:key="index">
+                <view class="pic">
+                  <image src="{{item.images[0]}}"></image>
+                </view>
+                <view class="txt">
+                  <view class="title">{{item.title}}
+                  </view>
+                  <view class="info">
+                    <text>时间 : </text>
+                    <text space="ensp" class="time">{{item.timeStamp}} </text>
+                  </view>
+                </view>
+                <view class="thank">
+                  <view class="amount">佣金：<text>❤ </text> {{item.reward}}</view>
+                  <view wx:if="{{item.complete}}" class="complete">已完成</view>
+                  <view wx:elif="{{item.Boolean}}" class="complete">已接受</view>
+                  <view wx:else></view>
+                </view>
+              </navigator>
+            </block>
+            <view  wx:else class="e-c">暂无帮助记录</view>
+          </view>
+
+          <navigator class="my" url="/pages/advice/advice">
+            <text>意见，建议箱</text>
+            <text>></text>
+          </navigator>
+        </view>
+      </view>
+    </view>
+  </view>
+</view>

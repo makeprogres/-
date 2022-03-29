@@ -1,31 +1,32 @@
 {
   "pages": [
-    "pages/index/index/index",
+    "pages/index/index",
     "pages/logs/logs",
-    "pages/taskCenter/order/order",
-    "pages/personalCenter/personal/personal",
-    "pages/index/list/list",
-    "pages/releaseTask/release/release",
+    "pages/order/order",
+    "pages/personal/personal",
+    "pages/list/list",
+    "pages/release/release",
     "pages/test/test",
-    "pages/taskCenter/message/message",
-    "pages/informationSharing/note/note",
-    "pages/personalCenter/releaseList/releaseList",
-    "pages/personalCenter/helpList/helpList",
-    "pages/taskCenter/taskDetails/taskDetails",
-    "pages/personalCenter/user/user",
-    "pages/personalCenter/change/changeName/changeName",
+    "pages/message/message",
+    "pages/note/note",
+    "pages/releaseList/releaseList",
+    "pages/helpList/helpList",
+    "pages/taskDetails/taskDetails",
+    "pages/user/user",
+    "pages/change/changeName/changeName",
     "pages/test2/test2",
-    "pages/test3/test3",
     "pages/changeInformation/changeInformation",
-    "pages/personalCenter/change/changeSchool/changeSchool",
-    "pages/personalCenter/change/changesCollege/changeCollege",
-    "pages/personalCenter/change/changeDeclaration/changeDeclaration",
-    "pages/informationSharing/thankNote/thankNote",
-    "pages/informationSharing/noteDetails/noteDetails"
+    "pages/change/changeSchool/changeSchool",
+    "pages/change/changesCollege/changeCollege",
+    "pages/change/changeDeclaration/changeDeclaration",
+    "pages/informationNote/informationNote",
+    "pages/noteDetails/noteDetails",
+    "pages/advice/advice",
+    "pages/myTask/myTask"
   ],
   "window": {
     "navigationBarBackgroundColor": "#d43c33",
-    "navigationBarTitleText": "行李帮",
+    "navigationBarTitleText": "帮李",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
@@ -34,31 +35,31 @@
     "backgroundColor": "#fff",
     "list": [
       {
-        "pagePath": "pages/index/index/index",
+        "pagePath": "pages/index/index",
         "text": "主页",
         "iconPath": "/storage/images/home.png",
         "selectedIconPath": "/storage/images/home-h.png"
       },
       {
-        "pagePath": "pages/informationSharing/note/note",
-        "text": "信息共享",
+        "pagePath": "pages/note/note",
+        "text": "共享信息",
         "iconPath": "/storage/images/list.png",
         "selectedIconPath": "/storage/images/list-h.png"
       },
       {
-        "pagePath": "pages/releaseTask/release/release",
+        "pagePath": "pages/release/release",
         "text": "发布任务",
         "iconPath": "/storage/images/release.png",
         "selectedIconPath": "/storage/images/release-h.png"
       },
       {
-        "pagePath": "pages/taskCenter/order/order",
+        "pagePath": "pages/order/order",
         "text": "任务中心",
         "iconPath": "/storage/images/heart.png",
         "selectedIconPath": "/storage/images/heart-h.png"
       },
       {
-        "pagePath": "pages/personalCenter/personal/personal",
+        "pagePath": "pages/personal/personal",
         "text": "个人中心",
         "iconPath": "/storage/images/personal.png",
         "selectedIconPath": "/storage/images/personal-h.png"

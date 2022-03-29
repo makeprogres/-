@@ -36,27 +36,29 @@ var common={
     var newyear = newData.getFullYear();
     var newmonth = zero(newData.getMonth() + 1);
     var newday = zero(newData.getDate());
-    if(year==newyear||month==newmonth||day==newday){
-      return formats.replace(/H|i|s/ig, function (matches) {
-        return ({
-            H: hour,
-            i: minite,
-            s: second
-        })[matches];
-    });
-    }else{
+    if(year==newyear&&month==newmonth&&day==newday){
       return formats.replace(/Y|m|d|H|i|s/ig, function (matches) {
         return ({
-            Y: year,
-            m: month,
-            d: day,
+            Y: '',
+            m: '',
+            d: '',
             H: hour,
             i: minite,
             s: second
         })[matches];
     });
+    } else{
+        return formats.replace(/Y|m|d|H|i|s/ig, function (matches) {
+          return ({
+              Y: year,
+              m: month,
+              d: day,
+              H: hour,
+              i: minite,
+              s: second
+          })[matches];
+        });
     }
-
 }
 }
 module.exports=common

@@ -17,6 +17,6 @@ App({
     this.globalData = {}
     this.userInfo={}
     this.tasklist={}
-    this.Thank_you_note={}
+    this.sharedResources={}
   }
 })

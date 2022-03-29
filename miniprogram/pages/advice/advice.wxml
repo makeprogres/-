@@ -1,0 +1,7 @@
+<form vlue="{{textVal}}" class="daBos" bindsubmit="btnSub">
+  <view  class="taskBox">
+  <view class="task">内容</view>
+    <textarea name="content" class="title" placeholder="请输入详细内容"></textarea>
+    <button type="warn" form-type="submit"> 提交 </button>
+  </view>
+</form>
